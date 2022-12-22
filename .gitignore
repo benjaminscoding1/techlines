@@ -8,6 +8,7 @@ node_modules/
 .env
 # testing
 /coverage
+/client/src/client_id.js
 # production
 /build
 images
