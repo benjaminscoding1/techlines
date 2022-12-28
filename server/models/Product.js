@@ -42,11 +42,11 @@ const productSchema = new mongoose.Schema(
     numberOfReviews: {
       type: Number,
       required: true,
+      default: 0,
     },
-    brand: {
+    price: {
       type: String,
       required: true,
-      default: 0,
     },
     stock: {
       type: Number,
