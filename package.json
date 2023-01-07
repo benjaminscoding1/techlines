@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node server/index",
     "client": "npm run start --prefix client",
+    "build": "cd client && npm install && npm run build",
     "server": "node server/index.js",
     "app": "concurrently npm \"npm run server\" \"npm run client\""
   },
