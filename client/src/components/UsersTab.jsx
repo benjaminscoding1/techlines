@@ -88,7 +88,7 @@ const UsersTab = () => {
                       <Td>{user.isAdmin === 'true' ? <CheckCircleIcon color='orange.500' /> : ''}</Td>
                       <Td>
                         <Button
-                          disabled={user._id === userInfo._id}
+                          isDisabled={user._id === userInfo._id}
                           variant='outline'
                           onClick={() => openDeleteConfirmBox(user)}>
                           <DeleteIcon mr='5px' />

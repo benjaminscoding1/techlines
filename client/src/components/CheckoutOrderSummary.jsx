@@ -117,7 +117,7 @@ const CheckoutOrderSummary = () => {
         total={total}
         onPaymentSuccess={onPaymentSuccess}
         onPaymentError={onPaymentError}
-        disabled={buttonDisabled}
+        isDisabled={buttonDisabled}
       />
       <Box align='center'>
         <Text fontSize='sm'>Have questions? or need help to complete your order?</Text>

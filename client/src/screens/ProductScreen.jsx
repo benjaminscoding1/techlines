@@ -135,15 +135,15 @@ const ProductScreen = () => {
                   <Text>{product.description}</Text>
                   <Text fontWeight={'bold'}>Quantity</Text>
                   <Flex w='170px' p='5px' border='1px' borderColor='gray.200' alignItems='center'>
-                    <Button disabled={amount <= 1} onClick={() => changeAmount('minus')}>
+                    <Button isDisabled={amount <= 1} onClick={() => changeAmount('minus')}>
                       <MinusIcon />
                     </Button>
                     <Text mx='30px'>{amount}</Text>
-                    <Button disabled={amount >= product.stock} onClick={() => changeAmount('plus')}>
+                    <Button isDisabled={amount >= product.stock} onClick={() => changeAmount('plus')}>
                       <SmallAddIcon w='20px' h='25px' />
                     </Button>
                   </Flex>
-                  <Button disabled={product.stock === 0} colorScheme='orange' onClick={() => addItem()}>
+                  <Button isDisabled={product.stock === 0} colorScheme='orange' onClick={() => addItem()}>
                     Add to cart
                   </Button>
                   <Stack width='270px'>
@@ -177,7 +177,7 @@ const ProductScreen = () => {
               <>
                 <Tooltip label={hasUserReviewed() ? 'You have already reviewed this product.' : ''} fontSize='md'>
                   <Button
-                    disabled={hasUserReviewed()}
+                    isDisabled={hasUserReviewed()}
                     my='20px'
                     w='140px'
                     colorScheme='orange'

@@ -104,14 +104,13 @@ const Navbar = () => {
           </HStack>
         </HStack>
         <Flex alignItems='center'>
-          <NavLink>
-            <Icon
-              as={colorMode === 'light' ? MoonIcon : SunIcon}
-              alignSelf='center'
-              onClick={() => toggleColorMode()}
-            />
-          </NavLink>
-
+          <Icon
+            cursor='pointer'
+            mr='3'
+            as={colorMode === 'light' ? MoonIcon : SunIcon}
+            alignSelf='center'
+            onClick={() => toggleColorMode()}
+          />
           {userInfo ? (
             <Menu>
               <MenuButton px='4' py='2' transition='all 0.3s' as={Button}>
